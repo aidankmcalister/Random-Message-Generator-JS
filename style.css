@@ -1,0 +1,169 @@
+/* #region reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* #endregion reset */
+
+
+* {
+    --ff-main: 'Zilla Slab', serif;
+    text-align: center;
+}
+
+body {
+    background-color: #4C5958;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0C686B;
+}
+
+.container * {
+    margin: 1rem 0rem;
+}
+
+.container {
+    background-color: #8AA6A3;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-main);
+    font-weight: 700;
+    box-shadow: 0.0625rem 0.875rem 0.9375rem -0.375rem rgba(0,0,0,0.75);
+    margin: 0 1rem;
+    min-width: 40rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin: .6rem;
+
+}
+
+.messageContainer {
+    background-color: #53918B;
+    border-radius: .75rem;
+    padding: 3rem 5rem;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+  position: absolute;
+  padding: 1rem;
+}
+
+/* #region buttons */
+
+.buttonContainer {
+    margin: 0 auto;
+    align-items: center;
+}
+
+button {
+    min-width: 11rem;
+    font-size: 1.2rem;
+    border: none;
+    text-decoration: none;
+    background-color: #53918B;
+    color: #0C686B;
+    border-radius: .75rem;
+    padding: 0.125rem;
+    box-shadow: 0.0625rem 0.675rem 0.475rem -0.375rem rgba(0,0,0,0.75);
+    transition: all .1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: all .1s ease-in-out;
+    transform: translateY(.125rem) scale(.98);
+    box-shadow: 0rem 0rem 0.1rem 0.05rem rgba(0,0,0,0.74);
+    background-color: #477c77;
+    color: #0d4c4e;
+}
+
+button:active {
+    background-color: #294643;
+    color: #0a3738;
+}
+
+/* #endregion buttons */
+
